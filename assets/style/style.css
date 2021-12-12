@@ -184,17 +184,24 @@ header p {
     animation: OHEYdidntcyathere 2.5s;
 }
 
+body {
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+}
+
 h1 {
-    padding-top: 55px;
-    width: 680px;
-    padding-bottom: 25px;
+    /* padding-top: 55px; */
+    /* width: 680px; */
+    /* padding-bottom: 25px; */
     font-size: 8rem;
-    text-align: right;
-    margin: 50px 30px 0 0;
+    /* text-align: right; */
+    /* margin: 50px 30px 0 0; */
+    padding-left: 50px;
     line-height: 7rem;
 }
 
-h1::after {
+/* h1::after {
     content: "";
     position: absolute;
     right: 100px;
@@ -203,7 +210,7 @@ h1::after {
     width: 46.5%;
     background-color: #794E2A;
     animation: whoopLineYAY 3s;
-}
+} */
 
 header p {
     font-size: 2.5rem;
