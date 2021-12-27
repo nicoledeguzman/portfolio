@@ -6,171 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>nnnnnn-nn-nnnnnn</title>
     <link href="assets/style/style.css" rel="stylesheet">
-    <link href="assets/slick/slick.css" rel="stylesheet"/>
-<!--     <link rel="preconnect" href="https://fonts.gstatic.com"> -->
-<!--     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;1,700&display=swap" rel="stylesheet">  -->
-    <script src="https://kit.fontawesome.com/a3d1f9c4b2.js" crossorigin="anonymous"></script>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Playfair+Display&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <div class="topSection">
-        <div class="wrapper">
-            <a href="/index.html">
-                <img src="assets/logo/logoBrown.svg" alt="Nicole de Guzman logo" class="logo">
-            </a>
-            <div class="navBar">
-                <img src="assets/buttons/dropdown.svg" alt="dropdown menu" class="dropdownButton">
-                <div class="navMenu">
-                    <nav>
-                        <ul>
-                            <li>
-                                <a href="#about" class="underlineMe">about</a>
-                            </li>
-                            <li>
-                                <a href="#projects" class="underlineMe">projects</a>
-                            </li>
-                            <li>
-                                <a href="#contact" class="underlineMe media">contact</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <a href="#contact" class="contactButton">contact</a>
-        </div>
-    </div>
-    <header id="top">
-        <div class="wrapper">
-            <div class="headerMain">
-                <p>Hey there! I'm a front-end web developer based in the Toronto area. Welcome to my website!</p>
+    <header>
+        <div class="header-text">
+            <h1>Nicole de Guzman</h1>
+            <p class="ital">Front-end web developer and designer based in the Toronto area</p>
+            <div class="contact-background">
+                <a href="#contact">
+                    <img src="assets/button-contact.png" class="button-contact">
+                </a>
             </div>
         </div>
     </header>
     <main>
-        <section id="about" class="about">
-            <div class="wrapper">
-                <div class="portraitAndAbout">
-                    <div class="aboutPhoto">
-                        <img src="assets/pictures/aboutMeImg.png" alt="two pictures of myself">
-                    </div>
-                    <div class="aboutText">
-                        <h2>About me</h2>
-                        <div class="makeItHalf">
-                            <p><span class="uppercase">I am Nicole,</span> a front-end developer with an affinity for art, design, and all things aesthetic.</p>
-                            <p>Making your daily venti vanilla soy latte and practicing the importance of "5, 6, se-ve-and-a, 8" used to be my day-to-day before the pandemic. Since then, coding has become a passion of mine and I soon came to realize that beautiful and accessibe websites are what I strive to create. My graduation from the <a href="https://www.junocollege.com/">Juno College of Technology</a> Immersive Bootcamp has given me the tools I need to make that possible.</p>
-                        </div>
-                    </div>
-                </div>
+        <section class="about">
+            <img src="" class="about-img">
+            <p><span class="i-am-nicole">I am Nicole,</span> a front-end developer and designer with an affinity for art, design, and all things aesthetic.</p>
+            <p>Making your daily venti soy matcha tea lattes and practicing the importance of “5, 6, se-ve-and-a, 8” used to be my day-to-day before the pandemic. Since then, coding and designing have become passions of mine and I soon came to realize that beautiful and accessible websites are what I strive to create, and my graduation from <a href="https://www.junocollege.com/">Juno College of Technology</a>'s Immersive Bootcamp has given me the tools I need to make that possible.</p>
+        </section>
+        <section class="work">
+            <h2>work</h2>
+            <div class="buttons">
+                <button>all</button>
+                <button>development</button>
+                <button>design</button>
+                <!-- show all projects, but be able to toggle between dev and design projects -->
+                <!-- have projects display in a horizontal scroll/carousel -->
             </div>
         </section>
-
-        <section class="projectzzz" id="projects">
-            <div class="wrapper">
-                <section class="highlightedProjects">
-                    <h2>projects</h2>
-                    <div class="projects">
-                        <div class="project project1">
-                            <img src="assets/pictures/colours.png" alt="screenshot of colours website">
-                            <div class="overlay">
-                                <div class="techStack">
-                                    <i class="fab fa-html5"></i>
-                                    <i class="fab fa-css3-alt"></i>
-                                    <i class="fab fa-sass"></i>
-                                    <i class="fab fa-js-square"></i>
-                                </div>
-                                <div class="links">
-                                    <a href="https://yemisi-nicole.github.io/coloursColoursColours/">live</a>
-                                    <a href="https://github.com/yemisi-nicole/coloursColoursColours">git</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project project2">
-                            <img src="assets/pictures/zoltan.png" alt="screenshot of nygma machine website">
-                            <div class="overlay">
-                                <div class="techStack">
-                                    <i class="fab fa-react"></i>
-                                </div>
-                                <div class="links">
-                                    <a href="https://nygma-machine.netlify.app/">live</a>
-                                    <a href="https://github.com/juno-zoltan/nygma-machine">git</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project project3">
-                            <img src="assets/pictures/harper.png" alt="screenshot of harper website">
-                            <div class="overlay">
-                                <div class="techStack">
-                                    <i class="fab fa-html5"></i>
-                                    <i class="fab fa-css3-alt"></i>
-                                    <i class="fab fa-sass"></i>
-                                </div>
-                                <div class="links">
-                                    <a href="https://nicoledeguzman.github.io/nicoleDeGuzmanProjectOne/">live</a>
-                                    <a href="https://nicoledeguzman.github.io/nicoleDeGuzmanProjectOne/">git</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </section>
-            </div>
+        <section class="contact" id="contact">
+            <h2>contact</h2>
+            <p>You're more than welcome to reach out if you want to work together, suggest any books, or have any plant tips!</p>
+            <form id="my-form" action="https://formspree.io/f/xqknaawd" method="POST">
+                <label>Email:</label>
+                <input type="email" name="email" required />
+                <label>Message:</label>
+                <input type="text" name="message" required/>
+                <button id="my-form-button">Submit</button>
+                <p id="my-form-status"></p>
+              </form>
         </section>
-    </main>    
-    <footer id="contact">
-        <div class="wrapper">
-            <div class="footerTop">
-                <img src="assets/logo/logoBrown.svg" alt="Nicole de Guzman logo" class="logo">
-            </div>
-            <div class="footerMid">
-                <ul class="footerSocialMedia">
-                    <li>
-                        <a href="https://www.linkedin.com/in/nicolegdeguzman/" class="oddOneOut">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/mkdir_nnnnnn">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/nicoledeguzman">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:nicolegdeguzman@gmail.com">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footerBottom">
-                <nav class="footerNav">
-                    <ul>
-                        <li>
-                            <a href="#top">top</a>
-                        </li>
-                        <li>
-                            <a href="#about">about</a>
-                        </li>
-                        <li>
-                            <a href="#projects">projects</a>
-                        </li>
-                    </ul>
-                </nav>
-                <p>Copyright 2021 © Nicole de Guzman</p>
-            </div>
+    </main>
+    <footer>
+        <div class="topFooter">
+            <a href="https://github.com/nicoledeguzman" class="social">github</a>
+            <a href="https://www.linkedin.com/in/nicolegdeguzman">linkedin</a>
         </div>
+        <p>Copyright 2021 © Designed and Developed by Nicole de Guzman</p>
     </footer>
     <!-- script -->
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="assets/slick/slick.min.js"></script>                
-
     <script src="scripts/script.js"></script>
 </body>
 </html> 
