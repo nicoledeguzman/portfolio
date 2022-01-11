@@ -9,55 +9,51 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="header-text">
             <h1>Nicole de Guzman</h1>
-            <p class="ital">Front-end web developer and designer based in the Toronto area</p>
+            <p class="header">Toronto-based developer and designer</p>
             <div class="contact-background">
                 <a href="#contact">
                     <img src="assets/button-contact.png" class="button-contact">
                 </a>
             </div>
         </div>
-    </header>
-    <main>
         <section class="about">
             <img src="" class="about-img">
-            <p><span class="i-am-nicole">I am Nicole,</span> a front-end developer and designer with an affinity for art, design, and all things aesthetic.</p>
+            <p class="about-first">Hey, I’m Nicole, a front-end web developer and designer with an affinity for art, design, and all things aesthetic.</p>
             <p>Making your daily venti soy matcha tea lattes and practicing the importance of “5, 6, se-ve-and-a, 8” used to be my day-to-day before the pandemic. Since then, coding and designing have become passions of mine and I soon came to realize that beautiful and accessible websites are what I strive to create, and my graduation from <a href="https://www.junocollege.com/">Juno College of Technology</a>'s Immersive Bootcamp has given me the tools I need to make that possible.</p>
         </section>
-        <section class="work">
-            <h2>work</h2>
-            <div class="buttons">
-                <button>all</button>
-                <button>development</button>
-                <button>design</button>
-                <!-- show all projects, but be able to toggle between dev and design projects -->
-                <!-- have projects display in a horizontal scroll/carousel -->
-            </div>
+    </header>
+    <main>
+        <section class="design">
+            <h2>design projects/h2>
+            <ul class="design-projects">
+                <li>project 1</li>
+                <li>project 2</li>
+                <li>project 3</li>
+                <li>project 4</li>
+            </ul>
         </section>
-        <section class="contact" id="contact">
-            <h2>contact</h2>
-            <p>You're more than welcome to reach out if you want to work together, suggest any books, or have any plant tips!</p>
-            <form id="my-form" action="https://formspree.io/f/xqknaawd" method="POST">
-                <label>Email:</label>
-                <input type="email" name="email" required />
-                <label>Message:</label>
-                <input type="text" name="message" required/>
-                <button id="my-form-button">Submit</button>
-                <p id="my-form-status"></p>
-              </form>
+        <section class="dev">
+            <h2>developed projects/h2>
+            <ul class="dev-projects">
+                <li>project 1</li>
+                <li>project 2</li>
+                <li>project 3</li>
+            </ul>
         </section>
     </main>
     <footer>
-        <div class="topFooter">
-            <a href="https://github.com/nicoledeguzman" class="social">github</a>
+        <div class="footer-mid">
+            <a href="https://github.com/nicoledeguzman">github</a>
+            <a href="mailto:nicolegdeguzman@gmail.com">email</a>
             <a href="https://www.linkedin.com/in/nicolegdeguzman">linkedin</a>
         </div>
-        <p>Copyright 2021 © Designed and Developed by Nicole de Guzman</p>
+        <p>© designed and developed by Nicole de Guzman</p>
     </footer>
     <!-- script -->
     <script src="scripts/script.js"></script>
