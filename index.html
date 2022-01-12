@@ -13,39 +13,102 @@
 </head>
 <body>
     <header>
-        <div class="header-text">
-            <h1>Nicole de Guzman</h1>
-            <p class="header">Toronto-based developer and designer</p>
-            <div class="contact-background">
-                <a href="#contact">
-                    <img src="assets/button-contact.png" class="button-contact">
-                </a>
+        <div class="wrapper">
+            <div>
+                <nav>
+                    <ul>
+                        <li class="sticky">about</li>
+                        <li class="fixed"><a href="#contact">contact</a></li>
+                    </ul>
+                </nav>
             </div>
+            <div class="header-text">  
+                <h1>Nicole de Guzman</h1>
+                <h1 class="second">Toronto-based developer and designer</h1>                
+                <div class="contact-button">
+                    <div class="contact-background">
+                        <a href="#contact">
+                            <img src="assets/button-contact.png" class="button-text">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <section class="about">
+                <img src="" class="about-img">
+                <p>Hey, I'm Nicole, a front-end web developer and designer with an affinity for art, design, and all things aesthetic.</p>
+                <p>Making your daily venti soy matcha tea lattes and practicing the importance of “5, 6, se-ve-and-a, 8” used to be my day-to-day before the pandemic. Since then, coding and designing have become passions of mine and I soon came to realize that beautiful and accessible websites are what I strive to create, and my graduation from <a href="https://www.junocollege.com/">Juno College of Technology</a>'s Immersive Bootcamp has given me the tools I need to make that possible.</p>
+            </section>
         </div>
-        <section class="about">
-            <img src="" class="about-img">
-            <p class="about-first">Hey, I’m Nicole, a front-end web developer and designer with an affinity for art, design, and all things aesthetic.</p>
-            <p>Making your daily venti soy matcha tea lattes and practicing the importance of “5, 6, se-ve-and-a, 8” used to be my day-to-day before the pandemic. Since then, coding and designing have become passions of mine and I soon came to realize that beautiful and accessible websites are what I strive to create, and my graduation from <a href="https://www.junocollege.com/">Juno College of Technology</a>'s Immersive Bootcamp has given me the tools I need to make that possible.</p>
-        </section>
     </header>
     <main>
-        <section class="design">
-            <h2>design projects/h2>
-            <ul class="design-projects">
-                <li>project 1</li>
-                <li>project 2</li>
-                <li>project 3</li>
-                <li>project 4</li>
-            </ul>
-        </section>
-        <section class="dev">
-            <h2>developed projects/h2>
-            <ul class="dev-projects">
-                <li>project 1</li>
-                <li>project 2</li>
-                <li>project 3</li>
-            </ul>
-        </section>
+        <div class="wrapper">
+            <section class="design">
+                <h2>design projects</h2>
+                <ul>
+                    <li>project 1</li>
+                    <li>project 2</li>
+                    <li>project 3</li>
+                    <li>project 4</li>
+                </ul>
+            </section>
+            <section class="dev">
+                <h2>developed projects</h2>
+                <!-- <ul>
+                    <li>project 1</li>
+                    <li>project 2</li>
+                    <li>project 3</li>
+                </ul> -->
+
+                <div class="dev-proj proj-1">
+                    <ul>
+                        <li>project 1</li>
+                        <li>
+                            <img src="">
+                        </li>
+                        <li>
+                            <div class="proj-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eaque asperiores explicabo consequatur dolorem!</p>
+                                <p>icons here</p>
+                                <a href="">code</a>
+                                <a href="">live site</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dev-proj proj-2">
+                    <ul>
+                        <li>project 2</li>
+                        <li>
+                            <img src="">
+                        </li>i>
+                        <li>
+                            <div class="proj-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eaque asperiores explicabo consequatur dolorem!</p>
+                                <p>icons here</p>
+                                <a href="">code</a>
+                                <a href="">live site</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dev-proj proj-3">
+                    <ul>
+                        <li>project 3</li>
+                        <li>
+                            <img src="">
+                        </li>
+                        <li>
+                            <div class="proj-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eaque asperiores explicabo consequatur dolorem!</p>
+                                <p>icons here</p>
+                                <a href="">code</a>
+                                <a href="">live site</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
     </main>
     <footer>
         <div class="footer-mid">

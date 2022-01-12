@@ -10,6 +10,8 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 /* CSS BEGINS */
 
+/* GENERAL */
+
 /* Webfont: BigillaDemo */
 @font-face {
     font-family: 'BigillaDemo';
@@ -18,20 +20,79 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 }
 
 body {
-    /* color: white; */
+    background-image: url('/assets/bg-landing.png');
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
-h1,
-h2 {
+.wrapper {
+    width: 95vw;
+    margin: 0 auto;
+}
+
+ul {
+    padding-left: 0;
+    margin: 0
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    right: 2.5vw;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+h1 {
     font-family: 'BigillaDemo', serif;
     text-transform: uppercase;
     font-weight: normal;
+    color: white;
+    font-size: 6.5rem;
 }
 
+h1 {
+    width: 600px;
+}
+
+h1.second {
+    text-align: right;
+    width: 1200px;
+    position: relative;
+    bottom: 259px;
+    align-self: flex-end;
+}
+
+div.contact-button {
+    position: relative;
+    bottom: 300px;
+    right: 50px;
+    align-self: flex-end;
+}
+
+h2,
 p,
 a,
 button {
     font-family: 'Poppins', sans-serif;
+    font-weight: 300;
 }
 
 a {
@@ -47,7 +108,7 @@ a {
     border-radius: 50%;
 }
 
-.button-contact {
+.button-text {
     position: absolute;
     top: -5px;
     right: 15px;
@@ -56,10 +117,81 @@ a {
     animation-play-state: paused;
 }
 
-.button-contact:hover,
-.button-contact:focus {
+.button-text:hover,
+.button-text:focus {
     animation-play-state: running;
 }
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about p {
+    width: 60vw;
+}
+
+.about p:first-of-type {
+    font-size: 60px;
+    font-weight: 200;
+    color: #8950E7;
+}
+
+.about p:nth-of-type(2) {
+    font-size: 20px;
+    color: #212121;
+    line-height: 30px;
+    margin-bottom: 100px;
+}
+
+.about a {
+    text-decoration: none;
+    color: #8950E7;
+}
+
+/* PROJECTS */
+
+main section {
+    margin-bottom: 100px;
+}
+
+h2 {
+    text-transform: uppercase;
+    color: #6C6C6C;
+    width: 95vw;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #6C6C6C;
+    margin: 0;
+}
+
+main ul li {
+    list-style-type: none;
+    font-family: 'BigillaDemo', serif;
+    text-transform: uppercase;
+    font-size: 80px;
+    padding: 30px 0 15px;
+    border-bottom: 1px solid #6C6C6C;
+}
+
+main ul li:last-of-type {
+    border-bottom: none;
+}
+
+/* DESIGN PROJECTS */
+
+.design ul li {
+    color: #4C48FB;
+}
+
+/* DEV PROJECTS */
+
+.dev-proj ul {
+    display: flex;
+    flex-direction: row;
+}
+
+/* ANIMATIONS */
 
 @keyframes spin {
     0% {
@@ -70,18 +202,3 @@ a {
     }
 }
 
-/* header {
-    font-family: 'BigillaDemo';
-}
-
-h1 {
-    font-size: 3rem;
-    font-weight: normal;
-    text-transform: uppercase;
-}
-
-p {
-    font-size: 2rem;
-    font-style: italic;
-    text-transform: uppercase;
-} */
