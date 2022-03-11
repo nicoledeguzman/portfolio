@@ -21,8 +21,8 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 body {
     background-image: url('/assets/bg-landing.png');
-    background-repeat: no-repeat;
-    background-size: contain;
+    /* background-repeat: no-repeat; */
+    /* background-size: contain; */
 }
 
 .wrapper {
