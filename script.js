@@ -25,7 +25,7 @@
 
 const cursorOuter = document.querySelector('.cursor-outer');
 const cursorInner = document.querySelector('.cursor-inner');
-const a = document.querySelectorAll('a');
+const link = document.querySelectorAll('.link');
 const project = document.querySelectorAll('.project');
 
 function mouseMovement() {
@@ -57,7 +57,7 @@ function clickClack() {
 
 function linkHover() {
 
-  a.forEach(link => {
+  link.forEach(link => {
     link.addEventListener('mouseover', () => {
       cursorOuter.classList.add('link-hover-outer');
       cursorInner.classList.add('link-hover-inner');
@@ -70,14 +70,25 @@ function linkHover() {
 
 };
 
-// document.querySelector('body').style.backgroundImage = 'url(assets/background-landing.svg)';
-
-
 
 // function projectHover() {
   
 // }
 
+console.log(project);
+
+project.forEach(project => {
+  project.addEventListener('mouseover', () => {
+    cursorInner.classList.add('project-hover-inner');
+    cursorInner.style.backgroundImage = 'url(assets/logo-black.svg)'
+    cursorOuter.classList.add('project-hover-outer');
+  });
+  project.addEventListener('mouseleave', () => {
+    cursorInner.classList.remove('project-hover-inner');
+    cursorInner.style.backgroundImage = 'none'
+    cursorOuter.classList.remove('project-hover-outer');
+  })
+})
 
 
 
