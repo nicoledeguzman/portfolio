@@ -47,17 +47,17 @@
     opacity: 1;
   }
 
-  .project-hover-inner {
-    width: 80px;
-    height: 80px;
-    /* background-image: url('../assets/logo-black.svg'); */
+  .project-hover-outer {
+    width: 100px;
+    height: 100px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
   }
 
-  .project-hover-outer {
-    width: 0;
-    height: 0;
+  .project-hover-inner {
+    width: 3px;
+    height: 3px;
+    opacity: 1;
   }
 

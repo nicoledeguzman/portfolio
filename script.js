@@ -26,7 +26,7 @@
 const cursorOuter = document.querySelector('.cursor-outer');
 const cursorInner = document.querySelector('.cursor-inner');
 const link = document.querySelectorAll('.link');
-const project = document.querySelectorAll('.project');
+const projects = document.querySelectorAll('.project');
 
 function mouseMovement() {
 
@@ -71,25 +71,53 @@ function linkHover() {
 };
 
 
-// function projectHover() {
-  
-// }
+function cursorProjects() {
 
-console.log(project);
+  projects.forEach((project, index) => {
 
-project.forEach(project => {
-  project.addEventListener('mouseover', () => {
-    cursorInner.classList.add('project-hover-inner');
-    cursorInner.style.backgroundImage = 'url(assets/logo-black.svg)'
-    cursorOuter.classList.add('project-hover-outer');
+    // GENERAL PROJECT CURSOR BEHAVIOUR
+    project.addEventListener('mouseover', () => {
+      cursorInner.classList.add('project-hover-inner');
+      cursorOuter.classList.add('project-hover-outer');
+    });
+    project.addEventListener('mouseleave', () => {
+      cursorInner.classList.remove('project-hover-inner');
+      cursorOuter.classList.remove('project-hover-outer');
+    })
+
+    // PROJECT-SPECIFIC CURSOR BEHAVIOUR
+    if (index == 0) {
+      project.addEventListener('mouseover', () => {
+        cursorOuter.style.backgroundImage = 'url(assets/logo-black.svg)';
+        console.log('in here!');
+      });
+      project.addEventListener('mouseleave', () => {
+        cursorOuter.style.backgroundImage = 'none';
+        console.log('gone now!');
+      });
+    } else if (index == 1) {
+      project.addEventListener('mouseover', () => {
+        cursorOuter.style.background = 'blue';
+        console.log('project 2');
+      });
+      project.addEventListener('mouseleave', () => {
+        cursorOuter.style.background = 'none';
+        console.log('left 2');
+      });
+    } else {
+      project.addEventListener('mouseover', () => {
+        cursorOuter.style.background = 'red';
+        console.log('project 3');
+      });
+      project.addEventListener('mouseleave', () => {
+        cursorOuter.style.background = 'none';
+        console.log('left 3');
+      });
+    };
+
   });
-  project.addEventListener('mouseleave', () => {
-    cursorInner.classList.remove('project-hover-inner');
-    cursorInner.style.backgroundImage = 'none'
-    cursorOuter.classList.remove('project-hover-outer');
-  })
-})
 
+};
 
 
 // runForm();
