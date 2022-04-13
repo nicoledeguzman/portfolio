@@ -1,0 +1,69 @@
+/* CSS BEGINS */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.landing {
+    min-height: 100vh;
+    background: url('../assets/background-landing.png') center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.marquee {
+    /* position: absolute; */
+    /* top: 30vh; */
+    /* left: 0; */
+    width: 100%;
+    font-size: 5vw;
+    line-height: 1;
+    overflow: hidden;
+    mix-blend-mode: difference;
+    background-color: transparent;
+}
+
+/* .marquee span {
+    animation: moveLeft 200s infinite;
+    white-space: nowrap;
+    display: block;
+    position: relative;
+} */
+
+
+
+/* CONTACT BUTTON */
+
+.contact-background {
+    position: relative;
+    left: 50px;
+    height: 100px;
+    width: 100px;
+    background: #8950E7;
+    border-radius: 50%;
+}
+
+.button-text {
+    position: absolute;
+    top: -5px;
+    right: 15px;
+    border-radius: 50%;
+    animation: spin 7s linear infinite;
+    animation-play-state: paused;
+}
+
+.button-text:hover,
+.button-text:focus {
+    animation-play-state: running;
+}
+
+/* .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
