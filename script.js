@@ -78,7 +78,9 @@ function cursorProjects() {
     // GENERAL PROJECT CURSOR BEHAVIOUR
     project.addEventListener('mouseover', () => {
       cursorInner.classList.add('project-hover-inner');
-      cursorOuter.classList.add('project-hover-outer');
+      cursorOuter.classList.add('project-hover-outer');        
+      cursorOuter.style.backgroundRepeat = 'no-repeat';
+      cursorOuter.style.backgroundPosition = 'center center';
     });
     project.addEventListener('mouseleave', () => {
       cursorInner.classList.remove('project-hover-inner');
@@ -89,29 +91,23 @@ function cursorProjects() {
     if (index == 0) {
       project.addEventListener('mouseover', () => {
         cursorOuter.style.backgroundImage = 'url(assets/logo-black.svg)';
-        console.log('in here!');
       });
       project.addEventListener('mouseleave', () => {
         cursorOuter.style.backgroundImage = 'none';
-        console.log('gone now!');
       });
     } else if (index == 1) {
       project.addEventListener('mouseover', () => {
         cursorOuter.style.background = 'blue';
-        console.log('project 2');
       });
       project.addEventListener('mouseleave', () => {
         cursorOuter.style.background = 'none';
-        console.log('left 2');
       });
     } else {
       project.addEventListener('mouseover', () => {
         cursorOuter.style.background = 'red';
-        console.log('project 3');
       });
       project.addEventListener('mouseleave', () => {
         cursorOuter.style.background = 'none';
-        console.log('left 3');
       });
     };
 
@@ -124,3 +120,4 @@ function cursorProjects() {
 mouseMovement();
 clickClack();
 linkHover();
+cursorProjects();
