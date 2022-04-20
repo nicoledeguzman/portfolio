@@ -257,6 +257,28 @@ html {
   }
 }
 
+@-webkit-keyframes moveLeft {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-3000vw);
+            transform: translateX(-3000vw);
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-3000vw);
+            transform: translateX(-3000vw);
+  }
+}
+
 * {
   cursor: none;
 }
@@ -326,18 +348,13 @@ html {
 /* Webfont: BigillaDemo */
 @font-face {
   font-family: 'BigillaDemo';
-  src: url("bigillaFont/Bigilla.otf");
-  src: url("bigillaFont/Bigilla-Bold.otf");
+  src: url("../../assets/fonts/Bigilla.otf");
+  src: url("../../assets/fonts/Bigilla-Bold.otf");
 }
 
 /* CSS BEGINS */
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.landing {
+.landing,
+.footer {
   min-height: 100vh;
   background: url("../assets/background-landing.png") center center;
   background-repeat: no-repeat;
@@ -349,11 +366,15 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.landing {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .marquee {
@@ -361,44 +382,66 @@ header {
   /* top: 30vh; */
   /* left: 0; */
   width: 100%;
-  font-size: 5vw;
+  font-size: 10vw;
   line-height: 1;
   overflow: hidden;
-  mix-blend-mode: difference;
-  background-color: transparent;
+  mix-blend-mode: overlay;
+  font-family: 'BigillaDemo', serif;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  color: #641010;
 }
 
-/* .marquee span {
-    animation: moveLeft 200s infinite;
-    white-space: nowrap;
-    display: block;
-    position: relative;
-} */
+.marquee span {
+  -webkit-animation: moveLeft 200s infinite;
+          animation: moveLeft 200s infinite;
+  white-space: nowrap;
+  display: block;
+  position: relative;
+}
+
 /* CONTACT BUTTON */
-.contact-background {
+.contact-button {
+  height: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 25px;
+  width: 94vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.contact-button .contact-background {
   position: relative;
   left: 50px;
-  height: 100px;
-  width: 100px;
-  background: #8950E7;
+  height: 65px;
+  width: 65px;
+  background: #710D9A;
+  mix-blend-mode: overlay;
   border-radius: 50%;
 }
 
 .button-text {
+  height: 70px;
+  width: 70px;
   position: absolute;
-  top: -5px;
+  top: -3px;
   right: 15px;
   border-radius: 50%;
   -webkit-animation: spin 7s linear infinite;
           animation: spin 7s linear infinite;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
 }
 
 .button-text:hover,
 .button-text:focus {
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 /* .about {
@@ -406,3 +449,52 @@ header {
     flex-direction: column;
     align-items: center;
 } */
+h2 {
+  width: 99vw;
+  margin: 0;
+  padding-left: 10px;
+  line-height: 35px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.projects {
+  height: calc(100vh - 75px);
+  margin-bottom: 75px;
+}
+
+.footer {
+  max-height: 100vh;
+}
+
+.footer .footer-mid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80vw;
+  font-family: 'Bigilla', serif;
+  text-transform: uppercase;
+  font-size: 45px;
+  position: relative;
+  top: calc(50vh - 21px);
+}
+
+.footer .footer-mid a {
+  color: #641010;
+  mix-blend-mode: overlay;
+  text-decoration: none;
+}
+
+.footer .footer-mid a:hover,
+.footer .footer-mid a:focus {
+  color: white;
+}
+
+.footer .copyright {
+  height: 100vh;
+  margin-top: 90vh;
+}

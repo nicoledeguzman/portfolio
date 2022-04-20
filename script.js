@@ -28,7 +28,7 @@ const cursorInner = document.querySelector('.cursor-inner');
 const link = document.querySelectorAll('.link');
 const projects = document.querySelectorAll('.project');
 
-function mouseMovement() {
+// function mouseMovement() {
 
   document.addEventListener('mousemove', (event) => {
     const x = event.clientX;
@@ -44,18 +44,18 @@ function mouseMovement() {
     cursorInner.style.top = `${y}px`;
     cursorInner.style.left = `${x}px`;
   });
-};
+// };
 
-function clickClack() {
+// function clickClack() {
   document.addEventListener('mousedown', (e) => {
     cursorInner.classList.add('click');
   });
   document.addEventListener('mouseup', () => {
     cursorInner.classList.remove('click');
   });
-};
+// };
 
-function linkHover() {
+// function linkHover() {
 
   link.forEach(link => {
     link.addEventListener('mouseover', () => {
@@ -68,10 +68,10 @@ function linkHover() {
     });
   });
 
-};
+// };
 
 
-function cursorProjects() {
+// function cursorProjects() {
 
   projects.forEach((project, index) => {
 
@@ -113,11 +113,40 @@ function cursorProjects() {
 
   });
 
-};
+// };
+
+
+// function smoothScrolling () {
+
+  const scrollLinks = document.querySelectorAll('.js-scroll');
+
+  scrollLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const href = link.getAttribute('href');
+          document.querySelector(href).scrollIntoView({
+              behavior: 'smooth'
+          })
+      })
+  })
+
+// }
+
+const title = 'Nicole de Guzman • Front-end developer';
+
+// create an Array of 50 spots where each spot is filled with [title]
+// .join() allows us to join each item of an array with the content written within the brackets (INSTEAD OF COMMAS)
+const marqueeText = new Array(50).fill(title).join(' • ');
+
+// PSEUDOCODE:
+// 1. grab our .marquee span from the html
+const marquee = document.querySelector('.marquee span');
+// 2. set our repeating title as the content
+marquee.innerHTML = marqueeText;
 
 
 // runForm();
-mouseMovement();
-clickClack();
-linkHover();
-cursorProjects();
+// mouseMovement();
+// clickClack();
+// linkHover();
+// cursorProjects();

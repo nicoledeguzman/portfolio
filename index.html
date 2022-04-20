@@ -16,73 +16,45 @@
 
 
 
-    <header>
+    <!-- <header>
 
-        <!-- HOW I WANT MY CODE TO GO TO RUN AS A STICKY HEADER SITCHHHH -->
-        <!-- <div class="sidebar-section">
 
-            <div class="sidebar-item">
-                <div class="make-me-sticky">
-                    <h3>Item 1</h3>
-                </div>
-            </div>
-            <div class="sidebar-item">
-                <div class="make-me-sticky">
-                    <h3>Item 2</h3>
-                </div>
-            </div>
-            <div class="sidebar-item">
-                <div class="make-me-sticky">
-                    <h3>Item 3</h3>
-                </div>
-            </div>
-
-        </div> -->
-
-        <nav>
-            <ul>
-
-                <li class="sticky">
-                    <p>about</p>
-                </li>
-
-                <li class="fixed">
-                    <a href="#contact" class="js-scroll scroll-to link"></a>contact</a>
-                </li>
-
-            </ul>
-        </nav>
-
-    </header> 
+    </header>  -->
 
 
 
     <main>
 
-        <!-- LANDING SECTION -->
-        <section class="landing heading wrapper" id="landing">
+        <div class="contact-button">
+            <div class="contact-background">
+                <a href="#contact" class="js-scroll scroll-to link">
+                    <img src="assets/button-contact.png" class="button-text link">
+                </a>
+            </div>
+        </div>
 
+        <!-- LANDING SECTION -->
+        <section class="landing heading about wrapper" id="landing">
+
+            <h2>about</h2>
+            
             <div class="page-title marquee mix-difference">  
                 <!-- here we add the title in multiple repeating times using javascript -->
-                <span>Nicole de Guzman — Front-end developer</span>
+                <span>Nicole de Guzman • Front-end developer</span>
             </div>       
 
-            <div class="contact-button">
-                <div class="contact-background">
-                    <a href="#contact">
-                        <img src="assets/button-contact.png" class="button-text link">
-                    </a>
-                </div>
-            </div>
 
-        </section>
+
+        <!-- </section> -->
 
 
         <!-- ABOUT SECTION -->
-        <section class="about wrapper" id="about">
+        <!-- <section class="about wrapper" id="about"> -->
 
             <img src="" class="about-img">
             <p>Hey, I'm Nicole, a front-end web developer with an affinity for art, design, and all things aesthetic.</p>
+            <p>After being introduced to the vast world of tech at the <a href="https://www.junocollege.com">Juno College of Technology</a>, I made the decision to pursue front-end development.</p>
+            <p>When I'm not coding, you can find me taking dance classes, at dance rehearsals (check out my dance company <a href="https://www.instagram.com/2.0danceco/">here</a>!), with my eyes glued to a book, or begging my cats for affection.</p>
             <p>Keep scrolling to see what I've created.</p>
 
         </section>
@@ -91,6 +63,8 @@
         <!-- PROJECTS SECTION -->
         <section class="projects wrapper" id="projects">
             
+            <h2>projects</h2>
+
             <div class="projects-list">
 
                 <div class="project project-1">
@@ -132,15 +106,15 @@
 
 
 
-    <footer>
+    <footer class="footer">
 
-        <div class="footer-mid">
+        <div class="footer-mid" id="contact">
             <a href="https://github.com/nicoledeguzman" class="link">github</a>
             <a href="mailto:nicolegdeguzman@gmail.com" class="link">email</a>
             <a href="https://www.linkedin.com/in/nicolegdeguzman" class="link">linkedin</a>
         </div>
         
-        <p>© designed and developed by Nicole de Guzman</p>
+        <p class="copyright">© designed and developed by Nicole de Guzman</p>
 
     </footer>
 
