@@ -145,19 +145,19 @@ const marquee = document.querySelector('.marquee span');
 marquee.innerHTML = marqueeText;
 
 
-function contactChange () {
+// function contactChange () {
 
-  const midSec = document.querySelectorAll('.middle');
+//   const midSec = document.querySelectorAll('.middle');
 
-  inView('.middle')
-      .on('enter', middle => {
-          middle.classList.add('in-viewport')
-      })
-      .on('exit', middle => {
-          middle.classList.remove('in-viewport')
-      })
+//   inView('.middle')
+//       .on('enter', middle => {
+//           middle.classList.add('in-viewport')
+//       })
+//       .on('exit', middle => {
+//           middle.classList.remove('in-viewport')
+//       })
 
-};
+// };
 
 
 // runForm();

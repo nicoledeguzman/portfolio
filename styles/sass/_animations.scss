@@ -10,9 +10,14 @@
 @keyframes moveLeft {
     0% {
         transform: translateX(0);
+        opacity: 0;
+    }
+    0.65% {
+        opacity: 1;
     }
     100% {
         transform: translateX(-3000vw);
+        opacity: 1;
     }
 }
 
@@ -26,5 +31,6 @@
     }
     100% {
         transform: skewX(-20deg);
+        opacity: 1;
     }
 }
