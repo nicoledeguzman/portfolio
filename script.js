@@ -132,17 +132,32 @@ const projects = document.querySelectorAll('.project');
 
 // }
 
-const title = 'Nicole de Guzman • Front-end developer';
+const title = 'Nicole de Guzman';
 
 // create an Array of 50 spots where each spot is filled with [title]
 // .join() allows us to join each item of an array with the content written within the brackets (INSTEAD OF COMMAS)
-const marqueeText = new Array(50).fill(title).join(' • ');
+const marqueeText = new Array(300).fill(title).join(' • ');
 
 // PSEUDOCODE:
 // 1. grab our .marquee span from the html
 const marquee = document.querySelector('.marquee span');
 // 2. set our repeating title as the content
 marquee.innerHTML = marqueeText;
+
+
+function contactChange () {
+
+  const midSec = document.querySelectorAll('.middle');
+
+  inView('.middle')
+      .on('enter', middle => {
+          middle.classList.add('in-viewport')
+      })
+      .on('exit', middle => {
+          middle.classList.remove('in-viewport')
+      })
+
+};
 
 
 // runForm();

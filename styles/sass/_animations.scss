@@ -15,3 +15,16 @@
         transform: translateX(-3000vw);
     }
 }
+
+@keyframes tilt {
+    0% {
+        transform: skewX(0deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: skewX(-20deg);
+    }
+}
