@@ -29,27 +29,7 @@
 
         <div class="main-main-content">
 
-            <!-- LANDING SECTION -->
-
-            <section class="landing heading" id="landing">
-
-
-                <div class="page-title marquee mix-difference">  
-                    <span>Nicole de Guzman</span>
-                    <span class="f-e-d">FRONT-END DEVELOPER</span>
-                </div>  
-
-                <!-- LANDING BACKGROUND -->
-
-                <!-- <div class="landing-background">
-                    <div class="circle"></div>
-                    <div class="full"></div>
-                </div> -->
-
-            </section>
-
             <!-- CONTACT BUTTON -->
-            <!-- putting the contact button here so it doesn't interfere with the landing page -->
 
             <div class="contact-button">
                 <div class="contact-background">
@@ -59,20 +39,33 @@
                 </div>
             </div>
 
+            <!-- LANDING SECTION -->
+
+            <section class="landing heading" id="landing">
+
+                <div class="page-title marquee mix-difference">  
+                    <span>Nicole de Guzman</span>
+                    <span class="f-e-d">FRONT-END DEVELOPER</span>
+                </div>  
+
+            </section>
+
             <!-- ABOUT SECTION -->
 
             <section class="about middle" id="about">
 
                 <h2>about</h2>
 
-                <div class="section-content wrapper">
+                <div class="section-content">
+                    <div class="wrapper about-content">
 
-                    <img src="" class="about-img">
-                    <p>Hey, I'm Nicole, a front-end web developer with an affinity for art, design, and all things aesthetic.</p>
-                    <p>After being introduced to the vast world of tech at the <a href="https://www.junocollege.com">Juno College of Technology</a>, I made the decision to pursue front-end development.</p>
-                    <p>When I'm not coding, you can find me at dance rehearsals (check out my dance company <a href="https://www.instagram.com/2.0danceco/">here</a>!), admiring my plants, with my eyes glued to a book, or begging my cats for affection.</p>
-                    <p>Keep scrolling to see what I've created.</p>
+                        <img src="" class="about-img">
+                        <p>Hey, I'm Nicole, a front-end web developer with an affinity for art, design, and all things aesthetic.</p>
+                        <p>After being introduced to the vast world of tech at the <a href="https://www.junocollege.com" class="link">Juno College of Technology</a>, I made the decision to pursue front-end development.</p>
+                        <p>When I'm not coding, you can find me at dance rehearsals (check out my dance company <a href="https://www.instagram.com/2.0danceco/" class="link">here</a>!), admiring my plants, with my eyes glued to a book, or begging my cats for affection.</p>
+                        <p>Keep scrolling to see what I've created.</p>
 
+                    </div>
                 </div>
 
             </section>
@@ -83,39 +76,40 @@
                 
                 <h2>projects</h2>
 
-                <div class="section-content projects-list wrapper">
+                <div class="section-content">
+                    <div class="wrapper projects-list">
 
-                    <div class="project project-1">
-                        <h3>Harper</h3>
-                        <!-- <img src=""> -->
-                        <div class="project-desc">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eaque asperiores explicabo consequatur dolorem!</p>
-                            <p>icons here</p>
-                            <a href="https://github.com/nicoledeguzman/nicoleDeGuzmanProjectOne">code</a>
+                        <div class="project project-1">
+                            <h3>Harper</h3>
+                            <!-- <img src=""> -->
+                            <div class="project-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eaque asperiores explicabo consequatur dolorem!</p>
+                                <p>icons here</p>
+                                <a href="https://github.com/nicoledeguzman/nicoleDeGuzmanProjectOne">code</a>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="project project-2">
-                        <h3>project 2</h3>
-                        <img src="">
-                        <div class="project-desc">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eaque asperiores explicabo consequatur dolorem!</p>
-                            <p>icons here</p>
-                            <a href="">code</a>
-                        </div>              
-                    </div>
+                        <div class="project project-2">
+                            <h3>project 2</h3>
+                            <img src="">
+                            <div class="project-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eaque asperiores explicabo consequatur dolorem!</p>
+                                <p>icons here</p>
+                                <a href="">code</a>
+                            </div>              
+                        </div>
 
-                    <div class="project project-3">
-                        <h3>project 3</h3>
-                        <img src="">
-                        <div class="project-desc">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eaque asperiores explicabo consequatur dolorem!</p>
-                            <video src="assets/colours.mp4">
-                            <p>icons here</p>
-                            <a href="">code</a>
-                        </div>               
-                    </div>
+                        <div class="project project-3">
+                            <h3>project 3</h3>
+                            <img src="">
+                            <div class="project-desc">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eaque asperiores explicabo consequatur dolorem!</p>
+                                <p>icons here</p>
+                                <a href="">code</a>
+                            </div>               
+                        </div>
 
+                    </div>
                 </div>
 
             </section>
@@ -128,6 +122,16 @@
 
     <footer class="footer">
 
+        <!-- TO TOP BUTTON -->
+
+        <div class="to-top-button">
+            <div class="to-top-background">
+                <a href="#landing" class="js-scroll scroll-to link">
+                    <img src="assets/button-to-top.png" class="button-text link">
+                </a>
+            </div>
+        </div>
+
         <div class="footer-mid" id="contact">
             <a href="https://github.com/nicoledeguzman" class="link">github</a>
             <a href="mailto:nicolegdeguzman@gmail.com" class="link">email</a>
@@ -139,7 +143,6 @@
     <div class="cursor-outer"></div>
     <div class="cursor-inner"></div>
     <!-- script -->
-    <script src="https://unpkg.com/in-view@0.6.1/dist/in-view.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html> 

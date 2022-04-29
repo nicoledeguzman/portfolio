@@ -93,7 +93,7 @@
   opacity: 0;
   width: 50px;
   height: 50px;
-  border: 1px solid black;
+  border: 1px solid #0A224D;
   border-radius: 100%;
   position: fixed;
   top: 0;
@@ -108,7 +108,7 @@
   width: 20px;
   height: 20px;
   border-radius: 100%;
-  background-color: black;
+  background-color: #0A224D;
   position: fixed;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -125,13 +125,13 @@
 .link-hover-outer {
   width: 3px;
   height: 3px;
-  background-color: black;
+  background-color: #0A224D;
 }
 
 .link-hover-inner {
   width: 50px;
   height: 50px;
-  border: 1px solid black;
+  border: 1px solid #0A224D;
   background-color: transparent;
   opacity: 1;
 }
@@ -140,8 +140,6 @@
   width: 100px;
   height: 100px;
   background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
 }
 
 .project-hover-inner {
@@ -179,7 +177,6 @@
           font-feature-settings: var(--bigilla-aalt);
 }
 
-/* CSS BEGINS */
 * {
   -webkit-font-feature-settings: "liga";
           font-feature-settings: "liga";
@@ -187,27 +184,6 @@
 
 body {
   background: wheat;
-}
-
-.wrapper {
-  width: 81vw;
-  margin: 0 auto;
-  padding: 2vw 5vw;
-  border: 1px #6E5528 solid;
-  border-top: none;
-  border-bottom: none;
-}
-
-.wrapper:last-of-type {
-  padding-bottom: 0;
-}
-
-section {
-  height: 100vh;
-}
-
-section:nth-of-type(2) {
-  border-bottom: 1px #6E5528 solid;
 }
 
 .landing,
@@ -228,6 +204,104 @@ section:nth-of-type(2) {
           align-items: center;
 }
 
+section {
+  height: 100vh;
+}
+
+section:nth-of-type(2) {
+  border-bottom: 1px #6E5528 solid;
+}
+
+.section-content {
+  width: 100%;
+  height: 100vh;
+  border-top: 1px #6E5528 solid;
+}
+
+.wrapper {
+  width: 81vw;
+  margin: 0 auto;
+  padding: 2vw 5vw;
+  border: 1px #6E5528 solid;
+  border-top: none;
+  border-bottom: none;
+}
+
+.wrapper:last-of-type {
+  padding-bottom: 0;
+}
+
+/* CONTACT BUTTON */
+.contact-button,
+.to-top-button {
+  z-index: 100;
+  height: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 88.5vh;
+  left: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  margin-right: 20px;
+}
+
+.contact-background,
+.to-top-background {
+  position: relative;
+  height: 65px;
+  width: 65px;
+  mix-blend-mode: difference;
+  border: 2px solid #0A224D;
+  border-radius: 50%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.button-text {
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  top: -4px;
+  right: 15px;
+  border-radius: 50%;
+  -webkit-animation: spin 7s linear infinite;
+          animation: spin 7s linear infinite;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.button-text:hover,
+.button-text:focus {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+p,
+h2 {
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #0A224D;
+  font-weight: 300;
+}
+
+h2 {
+  width: 100%;
+  margin: 0;
+  padding-left: 10px;
+  line-height: 35px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #F5DEB3A0;
+}
+
 .landing {
   background-image: url("../assets/background-landing.png");
   -webkit-box-pack: center;
@@ -236,22 +310,27 @@ section:nth-of-type(2) {
   border-bottom: 1px #6E5528 solid;
 }
 
-.footer {
-  background-image: url("../assets/background-footer.png");
-}
-
 .copyright {
   z-index: 100;
-  color: white;
-  mix-blend-mode: difference;
-  font-weight: 300;
   line-height: 0;
   position: fixed;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  width: 99vw;
+  text-align: center;
   margin: 0;
   padding: 18px;
+  display: inline-block;
+  color: white;
+  mix-blend-mode: difference;
+}
+
+.copyright:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
 }
 
 .marquee {
@@ -296,72 +375,8 @@ section:nth-of-type(2) {
           animation: tilt 3s 1.5s 1 forwards;
 }
 
-/* CONTACT BUTTON */
-.contact-button {
-  z-index: 100;
-  height: 0;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  margin-right: 20px;
-}
-
-.contact-button .contact-background {
-  position: relative;
-  height: 65px;
-  width: 65px;
-  mix-blend-mode: difference;
-  border: 2px solid #0A224D;
-  border-radius: 50%;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.button-text {
-  height: 70px;
-  width: 70px;
-  position: absolute;
-  top: -4px;
-  right: 15px;
-  border-radius: 50%;
-  -webkit-animation: spin 7s linear infinite;
-          animation: spin 7s linear infinite;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
-  -webkit-filter: invert(1);
-          filter: invert(1);
-}
-
-.button-text:hover,
-.button-text:focus {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-}
-
-p,
-h2 {
-  font-family: 'Poppins', sans-serif;
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: 300;
-}
-
-h2 {
-  width: 100%;
-  margin: 0;
-  padding-left: 10px;
-  line-height: 35px;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  border-bottom: 1px #6E5528 solid;
-  background-color: #F5DEB3A0;
+.about .section-content .about-content {
+  height: calc(100vh - 36px);
 }
 
 .projects {
@@ -369,8 +384,14 @@ h2 {
   margin-bottom: 75px;
 }
 
+.projects-list {
+  height: calc(100vh - 36px);
+}
+
 .footer {
   max-height: 100vh;
+  background-image: url("../assets/background-footer.png");
+  border-top: 1px #6E5528 solid;
 }
 
 .footer .footer-mid {
@@ -380,7 +401,7 @@ h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 80vw;
+  width: 81vw;
   font-family: 'Bigilla', serif;
   text-transform: uppercase;
   font-size: 45px;
