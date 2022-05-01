@@ -186,6 +186,10 @@ body {
   background: wheat;
 }
 
+main {
+  width: 100vw;
+}
+
 .landing,
 .footer {
   height: 100vh;
@@ -326,7 +330,7 @@ h2 {
 .copyright:after {
   content: '';
   position: absolute;
-  width: 100%;
+  width: 100vw;
   height: 1px;
   bottom: 0;
   left: 0;
@@ -416,13 +420,31 @@ h2 {
   border-bottom: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  position: relative;
 }
 
 .footer .footer-mid a:hover,
 .footer .footer-mid a:focus {
   -webkit-transform: skewX(-20deg);
           transform: skewX(-20deg);
-  color: white;
+}
+
+.footer .footer-mid a:after {
+  content: "";
+  bottom: 0;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #0A224D;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.footer .footer-mid a:hover:after,
+.footer .footer-mid a:focus:after {
+  width: 100%;
+  left: 0;
 }
 
 .footer .footer-mid a:nth-of-type(2) {
