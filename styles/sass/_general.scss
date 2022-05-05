@@ -113,7 +113,6 @@ h2 {
 }
 
 h3 {
-    font-family: 'Bigilla', serif;
     text-transform: uppercase;
 }
 
@@ -165,7 +164,6 @@ h3 {
     flex-direction: column;
     align-items: center;
     span {
-        // font-family: 'Bigilla-Bold', serif;
         animation: moveLeft 200s infinite 1.5s;
         white-space: nowrap;
         display: block;
@@ -178,6 +176,8 @@ h3 {
         animation: tilt 3s 1.5s 1 forwards;
     }
 }
+
+
 
 // ABOUT
 
@@ -212,7 +212,6 @@ h3 {
 }
 
 .different {
-    font-family: 'Bigilla-Bold', serif;
     font-size: 3vw;
     color: white;
     position: relative;
@@ -243,6 +242,7 @@ h3 {
 }
 
 
+
 // FOOTER 
 
 .footer {
@@ -253,7 +253,6 @@ h3 {
         display: flex;
         justify-content: space-between;
         width: 81vw;
-        // font-family: 'Bigilla', serif;
         text-transform: uppercase;
         font-size: 3vw;
         position: relative;

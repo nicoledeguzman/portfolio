@@ -322,7 +322,6 @@ h2 {
 }
 
 h3 {
-  font-family: 'Bigilla', serif;
   text-transform: uppercase;
 }
 
@@ -444,7 +443,6 @@ h3 {
 }
 
 .different {
-  font-family: 'Bigilla-Bold', serif;
   font-size: 3vw;
   color: white;
   position: relative;

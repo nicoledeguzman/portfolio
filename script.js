@@ -8,7 +8,8 @@ const titleText = new Array(300).fill(title).join(' • ');
 const pageTitle = document.querySelector('.page-title span');
 pageTitle.innerHTML = titleText;
 
-// function mouseMovement() {
+
+function mouseMovement() {
 
   document.addEventListener('mousemove', (event) => {
     const x = event.clientX;
@@ -24,18 +25,23 @@ pageTitle.innerHTML = titleText;
     cursorInner.style.top = `${y}px`;
     cursorInner.style.left = `${x}px`;
   });
-// };
 
-// function clickClack() {
+};
+
+
+function clickClack() {
+
   document.addEventListener('mousedown', (e) => {
     cursorInner.classList.add('click');
   });
   document.addEventListener('mouseup', () => {
     cursorInner.classList.remove('click');
   });
-// };
 
-// function linkHover() {
+};
+
+
+function linkHover() {
 
   link.forEach(link => {
     link.addEventListener('mouseover', () => {
@@ -48,10 +54,10 @@ pageTitle.innerHTML = titleText;
     });
   });
 
-// };
+};
 
 
-// function cursorProjects() {
+function cursorProjects() {
 
   projects.forEach((project, index) => {
 
@@ -93,10 +99,10 @@ pageTitle.innerHTML = titleText;
 
   });
 
-// };
+};
 
 
-// function smoothScrolling () {
+function smoothScrolling () {
 
   const scrollLinks = document.querySelectorAll('.js-scroll');
 
@@ -110,10 +116,11 @@ pageTitle.innerHTML = titleText;
       })
   })
 
-// }
+}
 
 
-// function visualsDelay () {
+function visualsDelay () {
+
   inView('.section-content')
       .on('enter', content => {
           content.classList.add('in-viewport')
@@ -135,12 +142,12 @@ pageTitle.innerHTML = titleText;
       })
   })
 
-// };
+};
 
-// runForm();
-// mouseMovement();
-// clickClack();
-// linkHover();
-// cursorProjects();
-// smoothScrolling();
-// visualsDelay():
+
+mouseMovement();
+clickClack();
+linkHover();
+cursorProjects();
+smoothScrolling();
+visualsDelay();
