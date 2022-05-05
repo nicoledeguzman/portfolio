@@ -150,8 +150,12 @@
 
 /* Webfont: BigillaDemo */
 @font-face {
-  font-family: 'BigillaDemo';
+  font-family: 'Bigilla';
   src: url("../../assets/fonts/Bigilla.otf");
+}
+
+@font-face {
+  font-family: 'Bigilla-Bold';
   src: url("../../assets/fonts/Bigilla-Bold.otf");
 }
 
@@ -177,9 +181,21 @@
           font-feature-settings: var(--bigilla-aalt);
 }
 
+h3,
+.footer-mid a {
+  font-family: 'Bigilla', serif;
+}
+
+.page-title span,
+.different {
+  font-family: 'Bigilla-Bold', serif;
+}
+
 * {
   -webkit-font-feature-settings: "liga";
           font-feature-settings: "liga";
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
 }
 
 body {
@@ -187,7 +203,7 @@ body {
 }
 
 main {
-  width: 100vw;
+  width: 100%;
 }
 
 .landing,
@@ -288,14 +304,13 @@ section:nth-of-type(2) {
 
 p,
 h2 {
-  font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
   font-size: 20px;
   color: #0A224D;
-  font-weight: 300;
 }
 
 h2 {
+  font-weight: 300;
   width: 100%;
   margin: 0;
   padding-left: 10px;
@@ -304,6 +319,11 @@ h2 {
   position: sticky;
   top: 0;
   background-color: #F5DEB3A0;
+}
+
+h3 {
+  font-family: 'Bigilla', serif;
+  text-transform: uppercase;
 }
 
 .landing {
@@ -327,6 +347,10 @@ h2 {
   mix-blend-mode: difference;
 }
 
+.copyright .symbol {
+  font-weight: 500;
+}
+
 .copyright:after {
   content: '';
   position: absolute;
@@ -337,15 +361,11 @@ h2 {
   background-color: white;
 }
 
-.marquee {
+.page-title {
   z-index: 100;
-  font-family: 'BigillaDemo', serif;
   text-transform: uppercase;
   letter-spacing: -1px;
   color: #999997;
-  /* position: absolute; */
-  /* top: 30vh; */
-  /* left: 0; */
   width: 100%;
   font-size: 12vw;
   line-height: 1;
@@ -363,7 +383,7 @@ h2 {
           align-items: center;
 }
 
-.marquee span {
+.page-title span {
   -webkit-animation: moveLeft 200s infinite 1.5s;
           animation: moveLeft 200s infinite 1.5s;
   white-space: nowrap;
@@ -372,7 +392,7 @@ h2 {
   opacity: 0;
 }
 
-.marquee span.f-e-d {
+.page-title span.f-e-d {
   font-size: 7vw;
   opacity: 0;
   -webkit-animation: tilt 3s 1.5s 1 forwards;
@@ -381,6 +401,66 @@ h2 {
 
 .about .section-content .about-content {
   height: calc(100vh - 36px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about .section-content .about-content p {
+  text-transform: none;
+  text-align: justify;
+  line-height: 35px;
+}
+
+.about .section-content .about-content p:first-of-type {
+  line-height: 50px;
+  font-size: 2vw;
+  font-weight: 300;
+  color: #2354D2;
+}
+
+.about .section-content .about-content p:last-of-type {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.about .section-content .about-content a {
+  font-weight: 400;
+  color: #0A224D;
+  text-decoration: none;
+}
+
+.about .section-content .about-content a:hover,
+.about .section-content .about-content a:focus {
+  color: #2354D2;
+}
+
+.different {
+  font-family: 'Bigilla-Bold', serif;
+  font-size: 3vw;
+  color: white;
+  position: relative;
+}
+
+.different::after {
+  content: '';
+  height: 45px;
+  width: 100%;
+  position: absolute;
+  bottom: -20%;
+  left: 0%;
+  -webkit-transform: skewX(-20deg);
+          transform: skewX(-20deg);
+  background-color: #2354D2;
+  z-index: -3;
 }
 
 .projects {
@@ -388,7 +468,7 @@ h2 {
   margin-bottom: 75px;
 }
 
-.projects-list {
+.projects .projects-list {
   height: calc(100vh - 36px);
 }
 
@@ -406,9 +486,8 @@ h2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 81vw;
-  font-family: 'Bigilla', serif;
   text-transform: uppercase;
-  font-size: 45px;
+  font-size: 3vw;
   position: relative;
   top: calc(50vh - 21px);
 }
@@ -686,4 +765,15 @@ html {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .about-content p {
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+  }
+  .in-viewport .about-content p {
+    opacity: 1;
+  }
 }

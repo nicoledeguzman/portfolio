@@ -1,32 +1,12 @@
-// function runForm () {
-
-//   const form = document.getElementById("my-form");
-      
-//   async function handleSubmit(e) {
-//     e.preventDefault();
-//     var status = document.getElementById("my-form-status");
-//     var data = new FormData(e.target);
-//     fetch(e.target.action, {
-//       method: form.method,
-//       body: data,
-//       headers: {
-//           'Accept': 'application/json'
-//       }
-//     }).then(response => {
-//       status.innerHTML = "Thanks for keeping in touch!";
-//       form.reset()
-//     }).catch(error => {
-//       status.innerHTML = "OOP– Let's try that again!"
-//     });
-//   }
-//   form.addEventListener("submit", handleSubmit)
-
-// };
-
 const cursorOuter = document.querySelector('.cursor-outer');
 const cursorInner = document.querySelector('.cursor-inner');
 const link = document.querySelectorAll('.link');
-const projects = document.querySelectorAll('.project');
+const projects = document.querySelectorAll('.project-desc');
+
+const title = 'Nicole de Guzman';
+const titleText = new Array(300).fill(title).join(' • ');
+const pageTitle = document.querySelector('.page-title span');
+pageTitle.innerHTML = titleText;
 
 // function mouseMovement() {
 
@@ -132,36 +112,35 @@ const projects = document.querySelectorAll('.project');
 
 // }
 
-const title = 'Nicole de Guzman';
 
-// create an Array of 50 spots where each spot is filled with [title]
-// .join() allows us to join each item of an array with the content written within the brackets (INSTEAD OF COMMAS)
-const marqueeText = new Array(300).fill(title).join(' • ');
+// function visualsDelay () {
+  inView('.section-content')
+      .on('enter', content => {
+          content.classList.add('in-viewport')
+      })
+      .on('exit', content => {
+          content.classList.remove('in-viewport')
+      })
 
-// PSEUDOCODE:
-// 1. grab our .marquee span from the html
-const marquee = document.querySelector('.marquee span');
-// 2. set our repeating title as the content
-marquee.innerHTML = marqueeText;
+  inView.threshold(0.4);
 
+  const content = document.querySelectorAll('.section-content');
 
-// function contactChange () {
+  content.forEach((content, index) => {
+      const aboutText = content.querySelectorAll('.about-content p');
 
-//   const midSec = document.querySelectorAll('.middle');
-
-//   inView('.middle')
-//       .on('enter', middle => {
-//           middle.classList.add('in-viewport')
-//       })
-//       .on('exit', middle => {
-//           middle.classList.remove('in-viewport')
-//       })
+      aboutText.forEach((text, index) => {
+          const delay = index * 300;
+          text.style.transitionDelay = `${delay}ms`
+      })
+  })
 
 // };
-
 
 // runForm();
 // mouseMovement();
 // clickClack();
 // linkHover();
 // cursorProjects();
+// smoothScrolling();
+// visualsDelay():

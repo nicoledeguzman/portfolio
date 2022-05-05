@@ -3,8 +3,12 @@
 
 /* Webfont: BigillaDemo */
 @font-face {
-    font-family: 'BigillaDemo';
+    font-family: 'Bigilla';
     src: url('../../assets/fonts/Bigilla.otf');
+}
+
+@font-face {
+    font-family: 'Bigilla-Bold';
     src: url('../../assets/fonts/Bigilla-Bold.otf');
 }
 
@@ -28,4 +32,14 @@
    whenever a class is being applied */
 .bigilla-aalt {
     font-feature-settings: var(--bigilla-aalt);
+}
+
+h3,
+.footer-mid a {
+    font-family: 'Bigilla', serif;
+}
+
+.page-title span,
+.different {
+    font-family: 'Bigilla-Bold', serif;
 }

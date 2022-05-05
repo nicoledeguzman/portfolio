@@ -1,16 +1,12 @@
-// @media (min-width: 640px) {
+@media (min-width: 640px) {
     
-//     .shape,
-//     .lineup li,
-//     .date {
-//         opacity: 0;
-//         transition: opacity 0.5s ease;
-//     }
+    .about-content p {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
 
-//     .in-viewport .shape,
-//     .in-viewport .lineup li,
-//     .in-viewport .date {
-//         opacity: 1;
-//     }
+    .in-viewport .about-content p {
+        opacity: 1;
+    }
 
-// }
+}
