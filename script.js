@@ -3,10 +3,14 @@ const cursorInner = document.querySelector('.cursor-inner');
 const link = document.querySelectorAll('.link');
 const projects = document.querySelectorAll('.project-desc');
 
-const title = 'Nicole de Guzman';
-const titleText = new Array(300).fill(title).join(' • ');
-const pageTitle = document.querySelector('.page-title span');
-pageTitle.innerHTML = titleText;
+function continuous() {
+
+  const title = 'Nicole de Guzman';
+  const titleText = new Array(300).fill(title).join(' • ');
+  const pageTitle = document.querySelector('.page-title span');
+  pageTitle.innerHTML = titleText;
+
+};
 
 
 function mouseMovement() {
@@ -76,24 +80,24 @@ function cursorProjects() {
     // PROJECT-SPECIFIC CURSOR BEHAVIOUR
     if (index == 0) {
       project.addEventListener('mouseover', () => {
-        cursorOuter.style.backgroundImage = 'url(assets/logo-black.svg)';
+        cursorOuter.style.backgroundImage = "url('assets/harper.png')";
       });
       project.addEventListener('mouseleave', () => {
         cursorOuter.style.backgroundImage = 'none';
       });
     } else if (index == 1) {
       project.addEventListener('mouseover', () => {
-        cursorOuter.style.background = 'blue';
+        cursorOuter.style.backgroundImage = "url('assets/colours.png')";
       });
       project.addEventListener('mouseleave', () => {
-        cursorOuter.style.background = 'none';
+        cursorOuter.style.backgroundImage = 'none';
       });
     } else {
       project.addEventListener('mouseover', () => {
-        cursorOuter.style.background = 'red';
+        cursorOuter.style.backgroundImage = "url('assets/two-second-tip.png')";
       });
       project.addEventListener('mouseleave', () => {
-        cursorOuter.style.background = 'none';
+        cursorOuter.style.backgroundImage = 'none';
       });
     };
 
@@ -121,6 +125,8 @@ function smoothScrolling () {
 
 function visualsDelay () {
 
+  inView.threshold(0.4);
+
   inView('.section-content')
       .on('enter', content => {
           content.classList.add('in-viewport')
@@ -129,25 +135,54 @@ function visualsDelay () {
           content.classList.remove('in-viewport')
       })
 
-  inView.threshold(0.4);
-
   const content = document.querySelectorAll('.section-content');
 
   content.forEach((content, index) => {
       const aboutText = content.querySelectorAll('.about-content p');
+      const projEach = content.querySelectorAll('.project');
 
       aboutText.forEach((text, index) => {
           const delay = index * 300;
-          text.style.transitionDelay = `${delay}ms`
+          text.style.transitionDelay = `${delay}ms`;
+      })
+
+      projEach.forEach((proj, index) => {
+        const delay = index * 300;
+        proj.style.transitionDelay = `${delay}ms`;
       })
   })
 
 };
 
+function scrollTo () {
 
+  inView.threshold(0);
+
+  inView('footer')
+    .on('enter', linkToTop)
+    .on('exit', linkToContact)
+
+  const goToButton = document.querySelector('.btn-img');
+  const buttonText = document.querySelector('.btn-text');
+
+  function linkToTop() {
+    goToButton.href = '#landing';
+    buttonText.src = 'assets/button-to-top.png';
+  };
+
+  function linkToContact() {
+    goToButton.href = '#contact';
+    buttonText.src = 'assets/button-contact.png';
+  };
+
+};
+
+  
+continuous();
 mouseMovement();
 clickClack();
 linkHover();
 cursorProjects();
 smoothScrolling();
 visualsDelay();
+scrollTo();
