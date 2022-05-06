@@ -92,7 +92,6 @@ p,
 h2 {
     text-transform: uppercase;
     font-size: 20px;
-    color: #0A224D;
 }
 
 h2 {
@@ -104,6 +103,7 @@ h2 {
     position: sticky;
     top: 0;
     background-color: #F5DEB3A0;
+    color: #0A224D;
 }
 
 h3 {
@@ -133,6 +133,8 @@ h3 {
     mix-blend-mode: difference;
     .symbol {
         font-weight: 500;
+        color: white;
+        mix-blend-mode: difference;
     }
 }
 
@@ -182,6 +184,7 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: #6E5528;
     p {
         text-transform: none;
         text-align: justify;
@@ -198,12 +201,30 @@ h3 {
     }
     a {
         font-weight: 400;
-        color: #0A224D;
+        color: #6E5528;
         text-decoration: none;
+        position: relative;
     }
     a:hover,
     a:focus {
-        color: #2354D2;
+        color: white;
+    }
+    a:after {
+        content: "";
+        height: 20px;
+        position: absolute;
+        bottom: -5%;
+        left: 0;
+        transform: skewX(-20deg);
+        background-color: #6E5528;
+        z-index: -3;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+    }
+    a:hover:after,
+    a:focus:after {
+        width: 103%; 
+        left: -2%; 
     }
 }
 
@@ -213,7 +234,7 @@ h3 {
     position: relative;
 }
 
-.different::after {
+.different:after {
     content: '';
     height: 4.5vw;
     width: 105%;
@@ -242,6 +263,17 @@ h3 {
     .project {
         padding: 30px 0;
     }
+    i {
+        font-size: 25px;
+    }
+    a {
+        color: #6E5528;
+        text-decoration: none;
+    }
+    // a:hover,
+    // a:focus {
+    //     color: ;
+    // }
 }    
 
 
