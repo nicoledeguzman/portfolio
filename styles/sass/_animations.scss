@@ -1,0 +1,36 @@
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+    0.65% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-3000vw);
+        opacity: 1;
+    }
+}
+
+@keyframes tilt {
+    0% {
+        transform: skewX(0deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: skewX(-20deg);
+        opacity: 1;
+    }
+}

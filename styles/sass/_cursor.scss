@@ -1,0 +1,61 @@
+* {
+  cursor: none;
+}
+
+.cursor-outer {
+  pointer-events: none;
+  opacity: 0;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #0A224D;
+  border-radius: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 200ms ease-out;
+}
+
+.cursor-inner {
+  pointer-events: none;
+  opacity: 0.3;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: #0A224D;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, opacity 0.3s
+}
+
+.click {
+  width: 50px;
+  height: 50px;
+  opacity: 0.5;
+}
+
+.link-hover-outer {
+  width: 3px;
+  height: 3px;
+  background-color: #0A224D;
+}
+
+.link-hover-inner {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #0A224D;
+  background-color: transparent;
+  opacity: 1;
+}
+
+.project-hover-outer {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+}
+
+.project-hover-inner {
+  width: 3px;
+  height: 3px;
+  opacity: 1;
+}
+

@@ -1,0 +1,15 @@
+@media (min-width: 640px) {
+    
+    .about-content p,
+    .project {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    .in-viewport .about-content p,
+    .in-viewport .project {
+        opacity: 1;
+    }
+
+}
+
