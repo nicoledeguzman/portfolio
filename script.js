@@ -142,12 +142,12 @@ function visualsDelay () {
       const projEach = content.querySelectorAll('.project');
 
       aboutText.forEach((text, index) => {
-          const delay = index * 300;
+          const delay = index * 600;
           text.style.transitionDelay = `${delay}ms`;
       })
 
       projEach.forEach((proj, index) => {
-        const delay = index * 300;
+        const delay = index * 600;
         proj.style.transitionDelay = `${delay}ms`;
       })
   })
@@ -155,8 +155,6 @@ function visualsDelay () {
 };
 
 function scrollTo () {
-
-  inView.threshold(0);
 
   inView('footer')
     .on('enter', linkToTop)
