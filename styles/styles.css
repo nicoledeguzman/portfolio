@@ -506,11 +506,26 @@ h3 {
 
 .projects-list i {
   font-size: 25px;
+  margin-bottom: 30px;
 }
 
 .projects-list a {
   color: #6E5528;
   text-decoration: none;
+  font-style: normal;
+  padding: 5px 10px;
+  margin-right: 10px;
+  border: 1px solid #6E5528;
+  border-radius: 30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.projects-list a:hover,
+.projects-list a:focus {
+  color: white;
+  background-color: #6E5528;
+  border: white;
 }
 
 .footer {

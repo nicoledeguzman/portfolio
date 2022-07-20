@@ -265,15 +265,25 @@ h3 {
     }
     i {
         font-size: 25px;
+        margin-bottom: 30px;
     }
     a {
         color: #6E5528;
         text-decoration: none;
+        font-style: normal;
+        padding: 5px 10px;
+        margin-right: 10px;
+        border: 1px solid #6E5528;
+        border-radius: 30px;
+        transition: 0.5s;
     }
-    // a:hover,
-    // a:focus {
-    //     color: ;
-    // }
+    a:hover,
+    a:focus {
+        color: white;
+        background-color: #6E5528;
+        border: white;
+        // transform: skewX(-20deg);
+    }
 }    
 
 
