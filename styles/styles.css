@@ -551,7 +551,7 @@ h3 {
 
 .footer .footer-mid a {
   color: #0A224D;
-  text-decoration: none;
+  /* text-decoration: none; */
   font-style: normal;
   border-bottom: none;
   -webkit-transition: 0.5s;
