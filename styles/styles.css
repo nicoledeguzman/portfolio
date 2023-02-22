@@ -238,7 +238,7 @@ section:nth-of-type(2) {
 }
 
 .wrapper {
-  width: 81vw;
+  width: calc(100vw - 260px);
   margin: 0 auto;
   padding: 2vw 5vw;
   border: 1px #6E5528 solid;
@@ -333,7 +333,7 @@ h3 {
   position: fixed;
   width: 99vw;
   text-align: center;
-  margin: 0;
+  margin: 0 auto;
   padding: 18px;
   display: inline-block;
   color: white;
@@ -417,7 +417,7 @@ h3 {
 
 .about .section-content .about-content p:first-of-type {
   line-height: 50px;
-  font-size: 2vw;
+  font-size: 27px;
   font-weight: 300;
   color: #2354D2;
 }
@@ -462,17 +462,17 @@ h3 {
 }
 
 .different {
-  font-size: 5vw;
+  font-size: 65px;
   color: white;
   position: relative;
 }
 
 .different:after {
   content: '';
-  height: 4.5vw;
+  height: 75px;
   width: 105%;
   position: absolute;
-  bottom: -7%;
+  bottom: -3%;
   left: -3%;
   -webkit-transform: skewX(-20deg);
           transform: skewX(-20deg);
@@ -542,7 +542,7 @@ h3 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 81vw;
+  width: calc(100vw - 260px);
   text-transform: uppercase;
   font-size: 3vw;
   position: relative;
@@ -585,6 +585,74 @@ h3 {
 
 .footer .footer-mid a:nth-of-type(2) {
   margin-left: 20px;
+}
+
+@media (max-width: 900px) {
+  .footer {
+    background-image: none;
+  }
+  .footer .footer-mid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: auto;
+    height: 60vh;
+    top: 20vh;
+    font-size: 40px;
+    text-align: center;
+  }
+  .footer a.link {
+    margin: 0;
+  }
+}
+
+@media (max-width: 770px) {
+  .wrapper {
+    width: 65vw;
+  }
+  p,
+  h2 {
+    font-size: 15px;
+  }
+  .go-to-btn {
+    display: none;
+  }
+  .about {
+    line-height: 25px;
+  }
+  .about .section-content .about-content p:first-of-type {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .different {
+    font-size: 30px;
+    display: block;
+    text-align: center;
+  }
+  .different:after {
+    height: 38px;
+  }
+  .about .section-content .about-content a {
+    display: block;
+    text-align: center;
+  }
+  .about .section-content .about-content a:after {
+    bottom: 18%;
+  }
+  .about .section-content .about-content a:hover::after,
+  .about .section-content .about-content a:focus::after {
+    width: 100%;
+  }
+  .copyright {
+    bottom: 0%;
+  }
+  .copyright:after {
+    bottom: 100%;
+  }
+  h2 {
+    position: unset;
+  }
 }
 
 html {
