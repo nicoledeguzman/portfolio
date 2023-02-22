@@ -602,12 +602,18 @@ h3 {
     font-size: 40px;
     text-align: center;
   }
-  .footer a.link {
+  .footer .footer-mid a:nth-of-type(2) {
     margin: 0;
   }
 }
 
 @media (max-width: 770px) {
+  * {
+    cursor: auto;
+  }
+  a {
+    cursor: pointer;
+  }
   .wrapper {
     width: 65vw;
   }
@@ -618,8 +624,11 @@ h3 {
   .go-to-btn {
     display: none;
   }
-  .about {
-    line-height: 25px;
+  .disappear {
+    display: none;
+  }
+  .about .section-content .about-content p {
+    line-height: 20px;
   }
   .about .section-content .about-content p:first-of-type {
     font-size: 20px;
@@ -652,6 +661,12 @@ h3 {
   }
   h2 {
     position: unset;
+  }
+}
+
+@media (max-width: 400px) {
+  .about .section-content .about-content {
+    height: auto;
   }
 }
 
