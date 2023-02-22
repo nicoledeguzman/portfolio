@@ -666,7 +666,7 @@ h3 {
 
 @media (max-width: 400px) {
   .about .section-content .about-content {
-    height: auto;
+    height: 100vh;
   }
 }
 
