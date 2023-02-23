@@ -470,7 +470,7 @@ h3 {
 .different:after {
   content: '';
   height: 75px;
-  width: 105%;
+  width: 103%;
   position: absolute;
   bottom: -3%;
   left: -3%;
