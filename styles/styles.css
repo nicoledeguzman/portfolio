@@ -607,6 +607,10 @@ h3 {
   margin-left: 20px;
 }
 
+#loom-companion-mv3 {
+  display: none;
+}
+
 @media (max-width: 900px) {
   .footer {
     background-image: none;

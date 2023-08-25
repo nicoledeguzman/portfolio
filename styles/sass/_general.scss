@@ -212,7 +212,7 @@ h3 {
     }
     a:after {
         content: "";
-        height: 28px; //Original height 20
+        height: 28px;
         position: absolute;
         bottom: -5%;
         left: 0;
@@ -283,7 +283,6 @@ h3 {
         color: white;
         background-color: #6E5528;
         border: white;
-        // transform: skewX(-20deg);
     }
 }    
 
@@ -335,4 +334,9 @@ h3 {
             margin-left: 20px;
         }
     }
+}
+
+// To get rid of that whack extra empty page that the server wants to add on to MY COOOODE :(
+#loom-companion-mv3 {
+    display: none;
 }
