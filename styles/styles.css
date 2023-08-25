@@ -462,7 +462,7 @@ h3 {
 
 .about .section-content .about-content a:after {
   content: "";
-  height: 20px;
+  height: 28px;
   position: absolute;
   bottom: -5%;
   left: 0;
