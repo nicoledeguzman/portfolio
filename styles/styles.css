@@ -84,6 +84,24 @@
   }
 }
 
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 * {
   cursor: none;
 }
@@ -325,6 +343,8 @@ h3 {
       -ms-flex-pack: center;
           justify-content: center;
   border-bottom: 1px #6E5528 solid;
+  -webkit-animation: fadeIn 1.5s;
+          animation: fadeIn 1.5s;
 }
 
 .copyright {
